@@ -46,6 +46,7 @@ This acts as a small **simulation environment** for designing and testing LLM‑
   Streamlit app: tabs, inputs, buttons, and layout. Calls `call_hf_llm` and uses helpers from `prompts.py`.
 
 - `llm_client.py`
+  Thin wrapper around `huggingface_hub.InferenceClient`:
 
  # Concatenate message content from choices
  
@@ -231,5 +232,5 @@ Open `http://localhost:8501` in your browser.
 
 In short, this app is a compact, deployable demo of **LLM‑based educational innovation**, showing both **prompt engineering concepts** and a realistic **simulation environment** for classroom and research use.
 
-  Thin wrapper around `huggingface_hub.InferenceClient`:
+  
 
