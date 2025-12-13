@@ -4,8 +4,8 @@ from huggingface_hub import InferenceClient
 
 load_dotenv()
 
-HF_API_TOKEN = os.getenv("HF_API_TOKEN")
-HF_MODEL_ID = os.getenv("HF_MODEL_ID", "openai/gpt-oss-120b:fastest")
+HF_API_TOKEN = os.getenv("HF_API_TOKEN") or st.secrets.get("HF_API_TOKEN")
+HF_MODEL_ID = os.getenv("HF_MODEL_ID", "openai/gpt-oss-120b:fastest") or st.secrets.get("HF_MODEL_ID")
 
 client = InferenceClient(
     model=HF_MODEL_ID,          # specify the model here
