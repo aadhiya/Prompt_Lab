@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 from huggingface_hub import InferenceClient
-
+import streamlit as st
 load_dotenv()
 
 HF_API_TOKEN = os.getenv("HF_API_TOKEN") or st.secrets.get("HF_API_TOKEN")
